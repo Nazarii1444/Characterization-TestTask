@@ -82,27 +82,30 @@ This project is a web-based STDF (Standard Test Data Format) file editor.
   - Encodes the updated JSON back into a `.bin` file.
   - Uses `STDFEncoder` class for encoding, that is implemented in `encoder.py`
 
-# `STDFDecoder` class features
-- decodes `mir` part
-- decodes `prr` part
-- decodes `ptr` part
-- decodes the whole `.bin` file using parts decoder from above
-
-# `STDFEncoder` class features
-- encodes `mir` part
-- encodes `prr` part
-- encodes `ptr` part
-- encodes the whole json (dict) using parts encoder from above
 ---
 
-## Usage Workflow
+# `STDFDecoder` class features
+- decodes `mir`, `prr` and `ptr` parts separately
+- decodes the whole `.bin` file using parts decoders from above
+
+# `STDFEncoder` class features
+- encodes `mir`, `prr` and `ptr` parts separately
+- encodes the whole json (dict) using parts encoders from above
+---
+
+## Usage
 
 1. Open the web application at `http://localhost:8000/home`
-2. Upload a `.bin` file using the **Upload File** options (you can use example of binary file in BIN folder)
-3. Click `Upload File` button.
-4. Edit the data displayed in the table.
-5. Enter a filename for the updated file with `.bin` extension included.
-6. Click `Download File` to save the modified `.bin` file.
+![img.png](images/img.png)
+2. Upload a `.bin` file using the **Upload File** options (you can use example of binary file in BIN folder).
+![img_1.png](img_images/.png)
+3. Edit the data displayed in the table.
+4. Enter a filename for the updated file with `.bin` extension included.
+![img_2.png](images/img_2.png)
+5. Click `Download File` to save the modified `.bin` file.
+![img_3.png](images/img_3.png)
+
+---
 
 ## Binary file structure
 The binary file is structured to store test data in a format inspired by the Standard Test Data Format (STDF). It consists of three types of records:
@@ -112,7 +115,7 @@ The binary file is structured to store test data in a format inspired by the Sta
 
 Each record has a fixed structure with predefined fields.
 
-Record Specifications:
+### Record Specifications:
 - MIR (Master Information Record):
 
     - Header (4 bytes): ASCII string "MIR".
@@ -132,6 +135,8 @@ Record Specifications:
   - Low Limit (4 bytes): 32-bit floating-point value.
   - High Limit (4 bytes): 32-bit floating-point value.
   - Pass/Fail Status (1 byte): Integer value where 0 = Fail and 1 = Pass.
+
+---
 
 ## Binary File Layout
 ```
