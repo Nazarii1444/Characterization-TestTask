@@ -13,7 +13,7 @@ This project is a web-based STDF (Standard Test Data Format) file editor.
 ## Installation
 1. Clone the repo: `git clone https://github.com/Nazarii1444/Characterization-TestTask.git` and navigate into folder
 2. Create Python virtual environment: `python -m venv venv`
-3. Activate environment
+3. Activate environment `source ./venv/bin/activate`
 4. Install Python dependencies: `pip install -r requirements.txt`
 5. Go to `http://localhost:8000/home`
 
