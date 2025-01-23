@@ -75,9 +75,24 @@ This project is a web-based STDF (Standard Test Data Format) file editor.
 
 #### Endpoints for handling file decoding and encoding.
 
-- **POST `/decode`**: Decodes a `.bin` file into JSON format.
-- **POST `/encode`**: Encodes the updated JSON back into a `.bin` file.
+- **POST `/decode`**
+  - Decodes a `.bin` file into JSON format.
+  - Uses `STDFDecoder` class for decoding, that is implemented in `decoder.py`
+- **POST `/encode`**
+  - Encodes the updated JSON back into a `.bin` file.
+  - Uses `STDFEncoder` class for encoding, that is implemented in `encoder.py`
 
+# `STDFDecoder` class features
+- decodes `mir` part
+- decodes `prr` part
+- decodes `ptr` part
+- decodes the whole `.bin` file using parts decoder from above
+
+# `STDFEncoder` class features
+- encodes `mir` part
+- encodes `prr` part
+- encodes `ptr` part
+- encodes the whole json (dict) using parts encoder from above
 ---
 
 ## Usage Workflow
