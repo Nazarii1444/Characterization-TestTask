@@ -98,7 +98,7 @@ This project is a web-based STDF (Standard Test Data Format) file editor.
 1. Open the web application at `http://localhost:8000/home`
 ![img.png](images/img.png)
 2. Upload a `.bin` file using the **Upload File** options (you can use example of binary file in BIN folder).
-![img_1.png](img_images/.png)
+![img_1.png](images/img_1.png)
 3. Edit the data displayed in the table.
 4. Enter a filename for the updated file with `.bin` extension included.
 ![img_2.png](images/img_2.png)
